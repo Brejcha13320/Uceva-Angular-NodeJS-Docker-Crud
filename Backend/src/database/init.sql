@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS calificaciones (
     id INT PRIMARY KEY,
     student_id INT NOT NULL,
     course_id INT NOT NULL,
-    grade NUMERIC(3, 2) NOT NULL CHECK (grade BETWEEN 0 AND 5),
+    grade NUMERIC(3, 2) NOT NULL,
     comments VARCHAR(255),
     status BOOLEAN DEFAULT TRUE,
 )
