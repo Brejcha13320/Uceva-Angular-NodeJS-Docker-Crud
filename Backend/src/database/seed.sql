@@ -54,3 +54,31 @@ INSERT INTO courses (
 ('Desarrollo de Aplicaciones Móviles', 'Fundamentos y desarrollo de aplicaciones para dispositivos móviles.', 3, 7, TRUE),
 
 ('Inteligencia Artificial', 'Fundamentos de inteligencia artificial, aprendizaje automático y algoritmos inteligentes.', 4, 8, TRUE);
+
+INSERT INTO calificaciones (
+    id,
+    student_id,
+    course_id,
+    grade,
+    comments,
+    status
+) VALUES
+(1, 1001, 1, 4.5, 'Buen desempeño en el curso.', TRUE),
+
+(2, 1002, 2, 3.8, 'Necesita mejorar en algunos conceptos.', TRUE),
+
+(3, 1003, 3, 4.2, 'Excelente participación en clase.', TRUE),
+
+(4, 1004, 4, 2.9, 'Requiere más práctica en programación.', TRUE),
+
+(5, 1005, 5, 4.7, 'Muy buen trabajo en proyectos.', TRUE),
+
+(6, 1006, 6, 3.5, 'Debe reforzar los conceptos de ingeniería de software.', TRUE),
+
+(7, 1007, 7, 4.0, 'Buen desempeño en redes de computadores.', TRUE),
+
+(8, 1008, 8, 3.2, 'Necesita mejorar en sistemas operativos.', TRUE),
+
+(9, 1009, 9, 4.8, 'Excelente desarrollo de aplicaciones móviles.', TRUE),
+
+(10, 1010, 10, 4.1, 'Buen desempeño en inteligencia artificial.', TRUE);
