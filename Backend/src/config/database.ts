@@ -1,6 +1,14 @@
 import { Pool } from "pg";
 import { envs } from "./envs";
 
+console.log("Credenciales leídas por Node:", {
+  host: envs.DB_HOST,
+  port: envs.DB_PORT,
+  user: envs.DB_USER,
+  password: envs.DB_PASSWORD,
+  database: envs.DB_NAME,
+});
+
 export const pool = new Pool({
   host: envs.DB_HOST,
   port: envs.DB_PORT,
