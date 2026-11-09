@@ -35,3 +35,5 @@ CREATE TABLE horarios(
     hora_fin TIME NOT NULL
     asignatura VARCHAR(100) NOT NULL
 );
+    status BOOLEAN DEFAULT TRUE
+

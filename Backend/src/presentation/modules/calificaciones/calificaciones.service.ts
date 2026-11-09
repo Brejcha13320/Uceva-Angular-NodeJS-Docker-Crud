@@ -5,13 +5,13 @@ import { CreateCalificaciones, calificaciones, UpdateCalificaciones } from "../.
 export class GradeService {
 
     public async getAllGrades(): Promise<calificaciones[]> {
-        const sql = `SELECT * FROM grades;`;
+        const sql = `SELECT * FROM calificaciones;`;
         const grades = await pool.query(sql);
         return grades.rows;
     }
 
     public async getGradeById(id: number): Promise<calificaciones | null> {
-        const sql = `SELECT * FROM grades WHERE id = $1;`;
+        const sql = `SELECT * FROM calificaciones WHERE id = $1;`;
         const grade = (await pool.query<calificaciones>(sql, [id])).rows[0];
         return grade ?? null;
     }
@@ -22,7 +22,7 @@ export class GradeService {
             throw CustomError.internalServer(`Ya existe una calificación con ese id`);
         }
         const sql = `
-            INSERT INTO grades (
+            INSERT INTO calificaciones (
                 id,
                 student_id,
                 course_id,
@@ -57,7 +57,7 @@ export class GradeService {
             throw CustomError.internalServer(`No existe una calificación con ese id`);
         }
         const sql = `
-            UPDATE grades
+            UPDATE calificaciones
             SET
                 student_id = COALESCE($1, student_id),
                 course_id = COALESCE($2, course_id),
@@ -88,7 +88,7 @@ export class GradeService {
             throw CustomError.internalServer(`No existe una calificación con ese id`);
         }
         const sql = `
-            DELETE FROM grades
+            DELETE FROM calificaciones
             WHERE id = $1
             RETURNING id;
         `;
