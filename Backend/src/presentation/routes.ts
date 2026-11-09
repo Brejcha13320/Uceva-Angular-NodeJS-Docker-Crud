@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { CourseRoutes } from "./modules/course/course.route";
 import { StudentRoutes } from "./modules/student/student.routes";
+import { HorarioRoutes } from './modules/horarios/horario.routes';
 
 export class AppRoutes {
 
@@ -13,6 +14,7 @@ export class AppRoutes {
     apiRouter.use("/courses", CourseRoutes.routes);
 
     router.use("/api", apiRouter);
+    router.use('/api/horarios', HorarioRoutes.routes);
 
     return router;
   }
