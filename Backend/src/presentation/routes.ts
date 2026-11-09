@@ -13,7 +13,7 @@ export class AppRoutes {
     // Definir rutas
     apiRouter.use("/students", StudentRoutes.routes);
     apiRouter.use("/courses", CourseRoutes.routes);
-    apiRouter.use("/grades", GradeRoutes.routes);
+    apiRouter.use("/calificaciones", GradeRoutes.routes);
 
     router.use("/api", apiRouter);
     router.use('/api/horarios', HorarioRoutes.routes);
