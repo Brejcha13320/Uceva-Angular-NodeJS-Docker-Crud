@@ -8,7 +8,7 @@ import { CreateStudentRequest, Student, UpdateStudentRequest } from '../interfac
 })
 export class StudentService {
   
-  http = inject(HttpClient);
+  private http = inject(HttpClient);
   url = 'http://localhost:3000/api/students';
 
   getAll(): Observable<Student[]> {

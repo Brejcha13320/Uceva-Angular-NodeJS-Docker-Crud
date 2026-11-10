@@ -35,6 +35,7 @@ export class CourseService {
             course.semester,
             course.status
         ];
+        console.log(values);
         const courseCreated = (await pool.query<Course>(sql, values)).rows[0];
         if(!courseCreated) {
             throw CustomError.internalServer(`No se pudo crear el curso`);

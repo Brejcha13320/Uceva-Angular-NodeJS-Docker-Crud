@@ -24,11 +24,13 @@ export class ListStudents {
     id: 'create-student-button',
     title: 'Create Student',
     type: 'primary',
+    outline: true,
+    icon: 'plus-circle'
   };
 
-  router = inject(Router);
-  studentService = inject(StudentService);
-  alertService = inject(AlertService);
+  private router = inject(Router);
+  private studentService = inject(StudentService);
+  private alertService = inject(AlertService);
 
   ngOnInit() {
     this.getStudents();
